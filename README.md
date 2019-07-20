@@ -38,3 +38,13 @@ The main media drive must be labeled "MEDIA" and formatted NTFS<br>
 - music<br>
 - pictures<br>
 - shared-disk<br>
+
+# startup control
+download these files to /home/pi
+- ledoff.py
+- ledon.py
+- startkodi.sh
+
+create the startup file <br>
+sudo geany /home/pi/.config/autostart/kodi.desktop  (see the kodi.desktop file)
+
