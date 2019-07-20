@@ -5,7 +5,9 @@ helper files to get the media server up and running properly
 # -----------------------------
 
 sudo apt-get update
+
 sudo apt-get dist-upgrade
+
 sudo apt-get upgrade
 
 # Kodi
