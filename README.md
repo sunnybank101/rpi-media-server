@@ -24,6 +24,8 @@ https://github.com/pimoroni/fanshim-python
 # Samba
 sudo apt-get install -y samba samba-common
 
+sudo geany /etc/samba/smb.conf    <see the smb.conf file>
+
 # default drive mount setup
 mkdir /mnt/MEDIA
 chmod 777 /mnt/MEDIA
