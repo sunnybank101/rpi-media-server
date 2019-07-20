@@ -46,5 +46,5 @@ download these files to /home/pi
 - startkodi.sh
 
 create the startup file <br>
-sudo geany /home/pi/.config/autostart/kodi.desktop  (see the kodi.desktop file)
+sudo geany /home/pi/.config/autostart/kodi.desktop  (see the kodi.desktop file - you may have to create the autostart folder)
 
