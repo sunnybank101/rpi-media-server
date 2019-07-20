@@ -1,6 +1,6 @@
 #!/bin/bash
 
-// stop all the regular startup!  gotta get control of the networking!!
+# Stop all the regular network startup - trust me it'll make a mess of it!
 sudo python ledon.py
 sudo systemctl stop raspap.service
 sudo systemctl stop hostapd.service
@@ -8,27 +8,20 @@ sudo systemctl stop dnsmasq.service
 sudo systemctl stop dhcpcd.service
 sudo python ledoff.py
 
-# the AP will try to auto start so just keep killing it for now
-#sudo /sbin/ip link set wlan0 down
-#/bin/sleep 20
-#sudo /sbin/ip link set wlan0 down
-#/bin/sleep 20
-#sudo /sbin/ip link set wlan0 down
-#/bin/sleep 20
-#sudo /sbin/ip link set wlan0 down
-#/bin/sleep 20
-
+# Hang around for a while to allow everything to stabilize
 /bin/sleep 20
 
-# ok in theory the network AP will be up now so we can start
-# stuff that we want to run on the AP IP address !!
-
-# messy but restart the networking in good order!
+# Restart the networking in good order!
 sudo /etc/raspap/hostapd/servicestart.sh --seconds 2
+
+# Now the AP is up properly - attatch everthing to the AP IP address
+
+# Start the Samba shares 
 sudo systemctl restart smbd.service
 
-# start kodi
+# Start kodi
 /usr/bin/kodi &
 
+# Done - turn the status led on
 /bin/sleep 10
 sudo python ledon.py
