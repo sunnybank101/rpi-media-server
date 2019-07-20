@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Kodi-startup
+Exec=/bin/sh /home/pi/startkodi.sh
