@@ -26,7 +26,7 @@ sudo apt-get install -y samba samba-common
 
 sudo geany /etc/samba/smb.conf    (see the smb.conf file)
 
-# default drive mount setup - NTFS
+# Default drive mount setup - NTFS
 sudo apt-get install -y ntfs-3g
 mkdir /mnt/MEDIA
 chmod 777 /mnt/MEDIA
@@ -41,7 +41,7 @@ The main media drive must be labeled "MEDIA" and formatted NTFS<br>
 - pictures<br>
 - shared-disk<br>
 
-# startup control
+# Startup control
 download these files to /home/pi
 - ledoff.py
 - ledon.py
