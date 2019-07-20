@@ -26,11 +26,13 @@ sudo apt-get install -y samba samba-common
 
 sudo geany /etc/samba/smb.conf    (see the smb.conf file)
 
-# default drive mount setup
+# default drive mount setup - NTFS
+sudo apt-get install -y ntfs-3g
 mkdir /mnt/MEDIA
 chmod 777 /mnt/MEDIA
 
-add the following line to /etc/fstab<br> sudo geany /etc/fstab<br>
+update fstab and add the line below - to get the drive to automount nicely<br>
+sudo geany /etc/fstab<br>
 LABEL=MEDIA      /mnt/MEDIA ntfs-3g    permissions,defaults,nofail,x-systemd.device-timeout=30        0       2
 
 The main media drive must be labeled "MEDIA" and formatted NTFS<br>
